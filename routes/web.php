@@ -19,5 +19,7 @@ Route::get('/pertanyaan', 'QuestionController@index')->name('question.index');
 Route::get('/pertanyaan/create', 'QuestionController@create');
 Route::post('/pertanyaan', 'QuestionController@store');
 
-Route::post('/jawaban/{pertanyaan_id}', 'AnswerController@store')->name('jawaban.store');
-//Route::get('/jawaban/{pertanyaan_id}', 'AnswerController@index')->name('jawaban.index');
+Route::post('/jawaban/{is_selected}', 'AnswerController@store');
+Route::get('/jawaban/{is_selected}', 'AnswerController@index');
+
+Route::get('/pertanyaan/{is_selected}', 'QuestionController@show');

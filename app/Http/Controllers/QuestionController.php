@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\QuestionModel;
+use App\Model\AnswerModel;
 
 class QuestionController extends Controller
 {
@@ -26,5 +27,12 @@ class QuestionController extends Controller
         if($question){
         return redirect()->route('question.index');  
         }
+    }
+
+    public function show($id_pertanyaan) {
+        $question = QuestionModel::find($id_pertanyaan);
+        $jawaban = AnswerModel::find($id_pertanyaan);
+
+        return view('/item/detail_question_answer',compact('question','jawaban'));
     }
 }

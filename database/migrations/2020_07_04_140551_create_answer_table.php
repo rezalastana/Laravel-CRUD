@@ -15,11 +15,9 @@ class CreateAnswerTable extends Migration
     {
         Schema::create('answer', function (Blueprint $table) {
             $table->bigIncrements('id_jawaban');
-            $table->string('isi_jawaban');
+            $table->longText('isi_jawaban');
             $table->timestamp('tanggal_dibuat_jawaban')->nullable();
             $table->timestamp('tanggal_diperbaharui_jawaban')->nullable();
-            $table->tinyInteger('is_selected');
-            $table->integer('id_penjawab');
         });
     }
 

@@ -14,8 +14,8 @@
             return $new_answer;
         }
 
-        public static function find($jawaban) {
-            $answer = DB::table('answer')->where('id_jawaban',$id_jawaban)->get();
+        public static function find($is_selected) {
+            $answer = DB::table('answer')->where('is_selected',$is_selected)->get();
             return $answer;
         }
     }
