@@ -2,8 +2,8 @@
 
 @section('content')
     <h1>Pertanyaan</h1>
-    <h2>Judul pertanyaan: {{$question->judul_pertanyaan}}</h2>
-    <p>Isi pertanyaan: {{ $question->isi_pertanyaan}}</p>
+    <h2>{{$question->judul_pertanyaan}}</h2>
+    <p>{{ $question->isi_pertanyaan}}</p>
     <p>Tanggal dibuat: {{ $question->tanggal_dibuat_pertanyaan}}</p>
     <p>Tanggal diperbaharui: </p> <br>
 

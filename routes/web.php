@@ -23,3 +23,6 @@ Route::post('/jawaban/{is_selected}', 'AnswerController@store');
 Route::get('/jawaban/{is_selected}', 'AnswerController@index');
 
 Route::get('/pertanyaan/{is_selected}', 'QuestionController@show');
+Route::get('/pertanyaan/{id_pertanyaan}/edit', 'QuestionController@edit');
+Route::put('/pertanyaan/{id_pertanyaan}', 'QuestionController@update');
+Route::delete('/pertanyaan/{id_pertanyaan}', 'QuestionController@delete');

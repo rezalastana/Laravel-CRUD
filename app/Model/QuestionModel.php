@@ -15,8 +15,19 @@
         }
 
         public static function find($id_pertanyaan) {
-            $question = DB::table('question')->where('id_pertanyaan',$id_pertanyaan)->get();
+            $question = DB::table('question')->where('id_pertanyaan',$id_pertanyaan)->first();
             return $question;
         }
+
+        public static function update($data) {
+            $update = DB::table('question')->where('id_pertanyaan',$data['id_pertanyaan'])->update($data);
+            return $update;
+        }
+
+        public static function delete($id_pertanyaan) {
+            $question = DB::table('question')->where('id_pertanyaan',$id_pertanyaan)->delete();
+            return 'deleted';
+        }
+
     }
 ?>
